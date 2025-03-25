@@ -23,7 +23,7 @@
 </head>
 <body>
 
-    <header>Welcome to Clement's Research Crew</header>
+    <header>The Research Hub of Kavin Jacob</header>
 
     <nav>
         <a onclick="showSection('home')">Home</a>
@@ -32,14 +32,65 @@
         <a onclick="showSection('contact')">Contact</a>
     </nav>
 
-    <section id="home" class="section active">
-        <h2>About Clement’s Research Crew</h2>
+<section id="home" class="section" style="display: flex; align-items: center; gap: 40px;">
+    <!-- Left side: Profile image and name -->
+    <div style="text-align: center; max-width: 250px;">
+        <img src="your-image.jpeg" alt="Kavin Jacob" style="width: 180px; height: 180px; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+        <h2 style="margin: 10px 0 5px;">D Kavin Jacob</h2>
+        <p style="color: #4CAF50; font-weight: bold;">Research Scholar</p>
+        <p style="color: #555;">Graph Theory | Chemical Graphs | Applied Mathematics</p>
+        
+        <!-- Icons for contact -->
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+            <a href="mailto:kavinjacob@gmail.com"><img src="mail.jpg" width="24"></a>
+            <a href="https://www.instagram.com/kavin_jacob?igsh=MXd2bmRobTk0bHEzcg%3D%3D&utm_source=qr"><img src="instagram.jpg" width="24"></a>
+            <a href="https://www.linkedin.com/in/kavin-jacob-881a5422a/"><img src="linkedin.png" width="24"></a>
+            <a href="https://www.facebook.com/kavin.jacob.56/"><img src="facebook.jpg" width="24"></a>
+        </div>
+ 
+
+        <!-- Research Profiles Icons -->
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+            <a href="https://www.researchgate.net/profile/D-Jacob-3?ev=hdr_xprf"><img src="researchgate.png" width="24"></a>
+            <a href="https://scholar.google.com/citations?user=lOhu4V8AAAAJ&hl=en"><img src="google scholar.png" width="24"></a>
+            <a href="https://github.com/KavinJacob"><img src="github.png" width="24"></a>
+            <a href="https://orcid.org/0000-0002-6407-7790"><img src="orcid.png" width="24"></a>
+        </div>
+    </div>
+
+    <!-- Right side: About, Interests, and Education -->
+    <div style="max-width: 600px;">
+        <h2>About Me</h2>
         <p style="text-align: justify;">
-            Clement’s Research Crew is a <strong>research-oriented team</strong> specializing in the <strong>graph-theoretical aspects of chemistry</strong>, 
-            with a focus on <strong>topological indices</strong>. Our work involves studying the structural properties of chemical compounds using 
-            graph-based models, providing insights into molecular stability, reactivity, and other chemical properties.
+           I am Kavin Jacob, a curious mind with a passion for learning and exploring new ideas. I enjoy problem-solving, working on creative projects, and engaging in meaningful discussions. With a background in mathematics, I appreciate logic and structure, but I also value creativity and innovation in all aspects of life. Beyond academics, I enjoy reading, technology, and finding new ways to apply knowledge to practical challenges. I believe in lifelong learning and continuous self-improvement, always seeking opportunities to grow personally and professionally. 
         </p>
-    </section>
+
+        <!-- Interests and Education Container -->
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <!-- Interests Section -->
+            <div style="flex: 1; padding-right: 20px;">
+                <h3 style="margin-bottom: 5px;">Interests</h3>
+                <ul style="padding-left: 20px; margin-top: 5px; line-height: 1.8;">
+                    <li>Scientific Programming (Python)</li>
+                    <li>Sports & Fitness (Badminton)</li>
+                    <li>Travel & Exploration</li>
+                    <li>Technology & Web Development <i>(This website was built by me)</i></li>
+                </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div style="flex: 1;">
+		<h3 style="margin-bottom: 5px;">Education</h3>	
+                <ul style="padding-left: 20px; margin-top: 5px; line-height: 1.8;">
+                <li style="margin-bottom: 8px;"><span style="margin-right: 8px;">🎓</span><strong>PhD in Mathematics</strong> – 2021-present, VIT, Vellore</li>
+                <li style="margin-bottom: 8px;"><span style="margin-right: 8px;">🎓</span><strong>MSc in Mathematics</strong> – 2019-2021, Loyola College, Chennai</li>
+                <li><span style="margin-right: 8px;">🎓</span><strong>BSc in Mathematics</strong> – 2016-2019, Loyola College, Chennai</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section id="research" class="section">
         <h2>Our Research</h2>
@@ -47,7 +98,7 @@
     </section>
 
     <section id="publications" class="section">
-        <h2>List of Publications</h2>
+        <h2>Recent Publications</h2>
         <div id="loading">Loading publications...</div>
         <div id="publication-list"></div>
     </section>
@@ -59,11 +110,21 @@
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = "none"; // Hide all sections
+        section.classList.remove('active'); // Remove active class
+    });
+
+    let selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.add('active');
+
+    // Set display style based on section
+    if (sectionId === "home") {
+        selectedSection.style.display = "flex"; // Home uses flex
+    } else {
+        selectedSection.style.display = "block"; // Others use block
+    }
+}
 
         async function loadPublications() {
             try {
