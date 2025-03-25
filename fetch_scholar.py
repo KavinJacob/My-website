@@ -3,7 +3,7 @@ import time
 from scholarly import scholarly
 
 # Google Scholar Author ID
-SCHOLAR_ID = "8G1qo1gAAAAJ"
+SCHOLAR_ID = "lOhu4V8AAAAJ"
 
 # Output file
 JSON_FILE = "publications.json"
