@@ -2,32 +2,33 @@ name: Update Publications Weekly
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight (UTC)
-  workflow_dispatch:  # Allows manual run
+    - cron: "0 0 * * 0"  # Runs every Sunday at midnight UTC
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
-  update-publications:
+  update:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set Up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    - name: Install Dependencies
-      run: pip install scholarly
+      - name: Install Dependencies
+        run: pip install scholarly
 
-    - name: Run Script
-      run: python fetch_scholar.py
+      - name: Run Script to Fetch Publications
+        run: python fetch_scholar.py
 
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "actions@github.com"
-        git add publications.json
-        git commit -m "Auto-update publications.json"
-        git push
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add publications.json
+          git commit -m "🔄 Auto-update publications"
+          git push
+        continue-on-error: true  # Avoids failure if no changes are detected
