@@ -8,6 +8,16 @@ SCHOLAR_ID = "8G1qo1gAAAAJ"
 # Output file
 JSON_FILE = "publications.json"
 
+def format_authors(authors):
+    """Formats authors list: 'A B, C D, and E F'"""
+    if not authors or authors == "Unknown":
+        return "Unknown"
+
+    author_list = authors.split(", ")  # Split names by comma
+    if len(author_list) > 1:
+        return ", ".join(author_list[:-1]) + " and " + author_list[-1]  # Add "and" before the last author
+    return authors  # Return single author name as is
+
 def fetch_scholar_publications():
     """Fetches publications from Google Scholar and formats them in APA style with links."""
     print("📢 Fetching publications from Google Scholar...")
@@ -24,7 +34,8 @@ def fetch_scholar_publications():
             bib_data = pub.get("bib") or {}
 
             # Extract details
-            authors = bib_data.get("author", "Unknown")
+            raw_authors = bib_data.get("author", "Unknown")
+            authors = format_authors(raw_authors)  # Format authors correctly
             year = str(bib_data.get("pub_year", "")).strip()
             title = bib_data.get("title", "")
             journal = bib_data.get("journal", "")
@@ -68,3 +79,5 @@ def fetch_scholar_publications():
 
 # Fetch publications when the script runs
 fetch_scholar_publications()
+
+
