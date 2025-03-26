@@ -35,26 +35,26 @@
 <section id="home" class="section" style="display: flex; align-items: center; gap: 40px;">
     <!-- Left side: Profile image and name -->
     <div style="text-align: center; max-width: 250px;">
-        <img src="your-image.jpeg" alt="Kavin Jacob" style="width: 180px; height: 180px; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+        <img src="images/your-image.jpeg" alt="Kavin Jacob" style="width: 180px; height: 180px; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
         <h2 style="margin: 10px 0 5px;">D Kavin Jacob</h2>
         <p style="color: #4CAF50; font-weight: bold;">Research Scholar</p>
         <p style="color: #555;">Graph Theory | Chemical Graphs | Applied Mathematics</p>
         
         <!-- Icons for contact -->
         <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-            <a href="mailto:kavinjacob@gmail.com"><img src="mail.jpg" width="24"></a>
-            <a href="https://www.instagram.com/kavin_jacob?igsh=MXd2bmRobTk0bHEzcg%3D%3D&utm_source=qr"><img src="instagram.jpg" width="24"></a>
-            <a href="https://www.linkedin.com/in/kavin-jacob-881a5422a/"><img src="linkedin.png" width="24"></a>
-            <a href="https://www.facebook.com/kavin.jacob.56/"><img src="facebook.jpg" width="24"></a>
+            <a href="mailto:kavinjacob@gmail.com"><img src="images/mail.jpg" width="24"></a>
+            <a href="https://www.instagram.com/kavin_jacob?igsh=MXd2bmRobTk0bHEzcg%3D%3D&utm_source=qr"><img src="images/instagram.jpg" width="24"></a>
+            <a href="https://www.linkedin.com/in/kavin-jacob-881a5422a/"><img src="images/linkedin.png" width="24"></a>
+            <a href="https://www.facebook.com/kavin.jacob.56/"><img src="images/facebook.jpg" width="24"></a>
         </div>
  
 
         <!-- Research Profiles Icons -->
         <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-            <a href="https://www.researchgate.net/profile/D-Jacob-3?ev=hdr_xprf"><img src="researchgate.png" width="24"></a>
-            <a href="https://scholar.google.com/citations?user=lOhu4V8AAAAJ&hl=en"><img src="google scholar.png" width="24"></a>
-            <a href="https://github.com/KavinJacob"><img src="github.png" width="24"></a>
-            <a href="https://orcid.org/0000-0002-6407-7790"><img src="orcid.png" width="24"></a>
+            <a href="https://www.researchgate.net/profile/D-Jacob-3?ev=hdr_xprf"><img src="images/researchgate.png" width="24"></a>
+            <a href="https://scholar.google.com/citations?user=lOhu4V8AAAAJ&hl=en"><img src="images/google scholar.png" width="24"></a>
+            <a href="https://github.com/KavinJacob"><img src="images/github.png" width="24"></a>
+            <a href="https://orcid.org/0000-0002-6407-7790"><img src="images/orcid.png" width="24"></a>
         </div>
     </div>
 
@@ -91,11 +91,152 @@
     </div>
 </section>
 
+<section id="research" class="section">
+    <h2>Research Activities</h2>
+    
+    <!-- Research Dropdown Menu -->
+    <div style="max-width: 800px; margin: 0 auto;">
+        
+        <!-- Research Interests -->
+        <button class="dropdown-btn" onclick="toggleDropdown('researchInterests')">Research Focus</button>
+        <div class="dropdown-content" id="researchInterests">
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheory')">Graph Theory & Chemical Graphs</button>
+            <div class="sub-dropdown-content" id="graphTheory">
+                <p>Study of graphs and their applications in chemistry, focusing on molecular structures and connectivity indices.</p>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('topologicalIndices')">Topological Indices & Molecular Descriptors</button>
+            <div class="sub-dropdown-content" id="topologicalIndices">
+                <p>Mathematical descriptors of molecular structures used in QSAR and QSPR modeling.</p>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('computationalChemistry')">Computational Chemistry</button>
+            <div class="sub-dropdown-content" id="computationalChemistry">
+                <p>Application of computational techniques to study molecular behavior and chemical properties.</p>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('scientificProgramming')">Scientific Programming (Python)</button>
+            <div class="sub-dropdown-content" id="scientificProgramming">
+                <p>Developing Python-based tools for graph analysis and molecular modeling.</p>
+            </div>
+        </div>
 
-    <section id="research" class="section">
-        <h2>Our Research</h2>
-        <p>We work on graph-based topological indices and network analysis.</p>
-    </section>
+        <!-- Research Awards -->
+        <button class="dropdown-btn" onclick="toggleDropdown('researchAwards')">Research Awards</button>
+        <div class="dropdown-content" id="researchAwards">
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('bestPaper')">Raman Research Award - VIT, Vellore</button>
+            <div class="sub-dropdown-content" id="bestPaper">
+                <p>Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research. </p>
+</body>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('outstandingResearcher')">Best Paper Award - Periyar University</button>
+            <div class="sub-dropdown-content" id="outstandingResearcher">
+                <p>Received the <strong>Best Paper Award</strong> at the <strong>International Conference on Graph Theory (ICGT 2024)</strong>, held on <strong>January 8-9, 2024</strong>, at <strong>Periyar University, Salem</strong>, for the research on <strong>"Generalized Results for Degree-Based Entropies of Aluminosilicate Minerals and Their Applications in QSPR Modeling."</strong></p>
+<img src="images/award_image.jpeg" alt="Raman Research Award" style="display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 600px; margin-top: 10px;">
+            </div>
+        </div>
+
+        <!-- Conferences Presented -->
+        <button class="dropdown-btn" onclick="toggleDropdown('conferencesPresented')">Conferences Presented</button>
+        <div class="dropdown-content" id="conferencesPresented">
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('ausICMS')">AUS-ICMS’25</button>
+            <div class="sub-dropdown-content" id="ausICMS">
+                <p>Fourth International Conference on Mathematics and Statistics (AUS-ICMS’25), American University of Sharjah, UAE.</p>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheoryConf')">International Graph Theory Conference 2024</button>
+            <div class="sub-dropdown-content" id="graphTheoryConf">
+                <p>Discussed advancements in graph-based molecular descriptors.</p>
+            </div>
+            
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('compChemSummit')">Computational Chemistry Summit 2023</button>
+            <div class="sub-dropdown-content" id="compChemSummit">
+                <p>Presented novel approaches to molecular topology computation.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<style>
+.dropdown-btn, .sub-dropdown-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-btn::after, .sub-dropdown-btn::after {
+    content: '\25BC';
+    float: right;
+    padding-right: 10px;
+}
+
+.dropdown-content, .sub-dropdown-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sub-dropdown-btn {
+    background-color: #0056b3;
+    font-size: 16px;
+    padding: 10px;
+}
+</style>
+
+<script>
+document.addEventListener('click', function(event) {
+    let isMain = event.target.classList.contains('dropdown-btn');
+    let isSub = event.target.classList.contains('sub-dropdown-btn');
+
+    if (isMain) {
+        // Close other main dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(content => {
+            if (content !== event.target.nextElementSibling) content.style.display = 'none';
+        });
+
+        // Toggle selected main dropdown
+        let dropdown = event.target.nextElementSibling;
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+
+    if (isSub) {
+        // Close other sub-dropdowns inside the same main dropdown
+        let parentDropdown = event.target.closest('.dropdown-content');
+        parentDropdown.querySelectorAll('.sub-dropdown-content').forEach(sub => {
+            if (sub !== event.target.nextElementSibling) sub.style.display = 'none';
+        });
+
+        // Toggle selected sub-dropdown
+        let subDropdown = event.target.nextElementSibling;
+        subDropdown.style.display = (subDropdown.style.display === 'block') ? 'none' : 'block';
+    }
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown-btn, .sub-dropdown-btn')) {
+        document.querySelectorAll('.dropdown-content, .sub-dropdown-content').forEach(content => {
+            content.style.display = 'none';
+        });
+    }
+});
+
+</script>
+
+
+
 
     <section id="publications" class="section">
         <h2>Recent Publications</h2>
@@ -157,6 +298,8 @@
             loadPublications();
         });
     </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
