@@ -70,16 +70,6 @@
             display: block;
         }
 
-        /* News Ticker */
-        .news-ticker {
-            background: #FFD700;
-            color: #000;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: center;
-        }
-
         /* Loading Animation */
         #loading {
             text-align: center;
@@ -88,79 +78,8 @@
             color: #002147;
             font-weight: bold;
         }
-/* Default styling (PC View) */
-#home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-}
 
-/* Mobile Optimization - Improved */
-@media screen and (max-width: 768px) {
-    /* Arrange navigation buttons in two columns */
-    nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 10px;
-        padding: 10px;
-        text-align: center;
-    }
 
-    nav a {
-        display: block;
-        padding: 10px;
-        font-size: 16px;
-        text-align: center;
-        width: 100%;
-        background: #004080; /* Keep button background */
-        color: white;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
-
-    nav a:hover {
-        background: #FFD700; /* Gold hover effect */
-        color: #002147;
-    }
-}
-    /* Home Section - Stack elements */
-    #home {
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px;
-    }
-
-    #home div {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    /* Optimize section layout */
-    .section {
-        padding: 15px;
-        max-width: 95%;
-    }
-
-    /* Ensure lists align properly */
-    .interests ul, .education ul {
-        padding-left: 0;
-        list-style-position: inside;
-    }
-
-    /* Reduce social media icon size */
-    .social-icons img, #home a img {
-        width: 28px !important;
-        height: 28px !important;
-    }
-
-    /* Adjust ticker size */
-    .news-ticker {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
     </style>
 </head>
 <body>
@@ -243,7 +162,99 @@
     </div>
 </section>
 
+<style>
 
+/* Default styling (PC View) */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: nowrap; /* Ensures everything is in a single line */
+}
+
+nav {
+    background: #004080;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Use flex for single-line layout */
+    justify-content: center; /* Center links */
+    gap: 40px; /* Space between links */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    max-width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+nav a:hover {
+    background: #FFD700;
+    color: #002147;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 layout for mobile */
+    }
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Ensure profile section is centered */
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Ensure research links are centered */
+    #research-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    /* Ensure interests and education follow after profile */
+    #interests-education {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* News Ticker */
+        .news-ticker {
+            background: #FFD700;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+</style>
 
 <section id="research" class="section">
     <h2 style="text-align: center;">Research Details</h2>
@@ -257,12 +268,32 @@
 
             <button class="sub-dropdown-btn" onclick="toggleDropdown('topologicalIndices')">Research Topic</button>
             <div class="sub-dropdown-content" id="topologicalIndices">
-                <p>Mathematical descriptors of molecular structures used in QSAR and QSPR modeling.</p>
+                    <h2 style="text-align: center;">Introduction of Novel Hybrid Topological Indices</h2>
+    <p style="text-align: justify;">
+        Our research team introduced  <strong>novel hybrid topological indices </strong> that enhance the predictive ability of molecular descriptors, particularly for hydrocarbons. By combining classical topological indices with new structural and connectivity-based parameters, we develop refined descriptors that exhibit  <strong>improved correlation with physicochemical properties and biological activities </strong>. These indices provide deeper insights into the molecular framework, enabling  <strong>more accurate predictions </strong> in QSAR/QSPR modeling. The integration of hybrid indices in computational chemistry fosters advancements in  <strong>drug design, materials science, and chemical informatics </strong>, bridging the gap between theoretical graph invariants and real-world applications.
+    </p>
+ <img src="images/hydrocarbons.png" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
+
+    <h2 style="text-align: center;">Generalization of Topological Indices for Complex Graphs</h2>
+    <p style="text-align: justify;">
+        We focus on the  <strong>generalization of topological indices for complex graphs </strong>, particularly  <strong>zeolite frameworks and 3D network structures </strong>. Traditional topological indices are primarily defined for planar molecular graphs, but their extension to  <strong>three-dimensional, highly interconnected networks </strong> presents new challenges and opportunities. Zeolites, with their intricate pore structures and periodic frameworks, require specialized descriptors that account for  <strong>spatial connectivity and long-range interactions </strong>. By adapting existing indices and formulating new ones, we aim to capture the unique topological properties of these frameworks, enabling better characterization of their catalytic behavior, adsorption capacity, and structural stability. Our work bridges  <strong>graph theory, materials science, and computational chemistry </strong>, providing deeper insights into the mathematical representation of 3D chemical systems.
+    </p>
+
+<img src="images/Zeolites.png" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
+
+
+    <h2 style="text-align: center;">Developing Algorithms for Computing Topological Indices</h2>
+    <p style="text-align: justify;">
+        We are also developing  <strong>efficient algorithms and computer-aided techniques </strong> for the analysis of chemical and general networks. Manual computation of topological indices for large and complex graphs is impractical, necessitating the design of  <strong>automated, scalable solutions </strong>. Our research involves implementing  <strong>optimized graph traversal algorithms, adjacency-based indexing methods, and entropy-driven approaches </strong> to compute a wide range of graph invariants. Additionally, we are integrating these computational techniques into  <strong>user-friendly software tools </strong>, making them accessible to researchers in chemistry, materials science, and network analysis. By leveraging advancements in  <strong>algorithm design, data structures, and parallel computing </strong>, our goal is to provide a powerful computational framework for the rapid and accurate analysis of molecular and complex network properties.
+    </p>
+<img src="images/computing molecules.webp" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
             </div>
 
             <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheory')">Research Team</button>
             <div class="sub-dropdown-content" id="graphTheory">
-                <p>Our research team at VIT, led by <strong>Dr. Clement J</strong>, is dedicated to advancing the field of mathematical chemistry and topological indices. Under his expert guidance, we explore the structural and computational aspects of chemical graph theory, with applications in QSAR/QSPR modeling, network analysis, and entropy measures. Working alongside my co-scholars Rahul M. P., Junias J. Singh, and P. Peter, we actively contribute to high-impact research, focusing on novel graph invariants, zeolite frameworks, and their implications in material science. Our collaborative efforts aim to push the boundaries of mathematical modeling and its interdisciplinary applications.</p>
+                <p style="text-align: justify;">Our research team at VIT, led by <strong>Dr. Clement J</strong>, is dedicated to advancing the field of mathematical chemistry and topological indices. Under his expert guidance, we explore the structural and computational aspects of chemical graph theory, with applications in QSAR/QSPR modeling, network analysis, and entropy measures. Working alongside my co-scholars Rahul M. P., Junias J. Singh, and P. Peter, we actively contribute to high-impact research, focusing on novel graph invariants, zeolite frameworks, and their implications in material science. Our collaborative efforts aim to push the boundaries of mathematical modeling and its interdisciplinary applications.</p>
+ <img src="images/Research_team.jpeg" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
+
             </div>
             
             
@@ -274,13 +305,13 @@
 
             <button class="sub-dropdown-btn" onclick="toggleDropdown('outstandingResearcher')">Best Paper Award - Periyar University</button>
             <div class="sub-dropdown-content" id="outstandingResearcher">
-                <p>Received the <strong>Best Paper Award</strong> at the <strong>International Conference on Graph Theory (ICGT 2024)</strong>, held on <strong>January 8-9, 2024</strong>, at <strong>Periyar University, Salem</strong>, for the research on <strong>"Generalized Results for Degree-Based Entropies of Aluminosilicate Minerals and Their Applications in QSPR Modeling."</strong></p>
+                <p style="text-align: justify;">Received the <strong>Best Paper Award</strong> at the <strong>International Conference on Graph Theory (ICGT 2024)</strong>, held on <strong>January 8-9, 2024</strong>, at <strong>Periyar University, Salem</strong>, for the research on <strong>"Generalized Results for Degree-Based Entropies of Aluminosilicate Minerals and Their Applications in QSPR Modeling."</strong></p>
                 <img src="images/award_image.jpeg" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
             </div>
 
             <button class="sub-dropdown-btn" onclick="toggleDropdown('bestPaper')">Raman Research Award - VIT, Vellore</button>
             <div class="sub-dropdown-content" id="bestPaper">
-                <p>Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research.</p>
+                <p style="text-align: justify;">Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research.</p>
 
 		    <div class="slider-container">
         <div class="slider">
@@ -300,7 +331,7 @@
         <div class="dropdown-content" id="conferencesPresented">
             <button class="sub-dropdown-btn" onclick="toggleDropdown('ausICMS')">AUS-ICMS’25-American University of Sharjah</button>
             <div class="sub-dropdown-content" id="ausICMS">
-                <p>The research paper <strong>"On Szeged-Type Indices of Zeolite BCT Framework"</strong> was successfully presented at the prestigious <strong>Fourth International Conference on Mathematics and Statistics (AUS-ICMS’25)</strong>, held from <strong>February 20-22, 2025, at the American University of Sharjah, UAE</strong>. The event provided valuable exposure, fostering insightful discussions with global experts and opening doors for future collaborations in mathematical and chemical graph theory. It was also a fantastic opportunity to explore Dubai, visiting some of its iconic landmarks and experiencing the vibrant culture of the city 🌆.</p>
+                <p style="text-align: justify;">The research paper <strong>"On Szeged-Type Indices of Zeolite BCT Framework"</strong> was successfully presented at the prestigious <strong>Fourth International Conference on Mathematics and Statistics (AUS-ICMS’25)</strong>, held from <strong>February 20-22, 2025, at the American University of Sharjah, UAE</strong>. The event provided valuable exposure, fostering insightful discussions with global experts and opening doors for future collaborations in mathematical and chemical graph theory. It was also a fantastic opportunity to explore Dubai, visiting some of its iconic landmarks and experiencing the vibrant culture of the city 🌆.</p>
 
                 <!-- Image Slider -->
                 <div class="slider-container">
@@ -563,9 +594,69 @@ document.querySelectorAll('.slider-container').forEach((container, index) => {
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: clementresearch@university.edu</p>
+        <h2>Contact Information</h2>
+    <p><i>If you have any inquiries or collaboration requests, feel free to reach out.</i></p>
+    
+    <div class="contact-details">
+        <p style="text-align: left;"><strong>Email:</strong> kavinjacob@gmail.com</p>
+        <p style="text-align: left;"><strong>Phone:</strong> +91 9043888866</p>
+        <p style="text-align: left;"><strong>Address:</strong> Vellore Institute of Technology, Vellore, Tamil Nadu, India</p>
+    </div>
+
+    <form action="mailto:kavinjacob@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
     </section>
+
+<style>
+#contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-details p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #002147;
+}
+
+</style>
 
     <script>
         function showSection(sectionId) {
