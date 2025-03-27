@@ -31,6 +31,26 @@
         <a onclick="showSection('publications')">Publications</a>
         <a onclick="showSection('contact')">Contact</a>
     </nav>
+<div class="news-ticker">
+    <marquee behavior="scroll" direction="left">
+        🔥 Recent Publication: "A New Approach to Chemical Graph Theory" - Published in XYZ Journal |  
+        📢 Upcoming Conference: AUS-ICMS'25 - American University of Sharjah |  
+        🎉 Research Spotlight: "Szeged-Type Entropies in Zeolite Frameworks" 🚀  
+    </marquee>
+</div>
+
+<style>
+    /* News Ticker Styles */
+    .news-ticker {
+        background: #FFD700; /* Gold background */
+        color: #000; /* Black text */
+        padding: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+</style>
+
 
 <section id="home" class="section" style="display: flex; align-items: center; gap: 40px;">
     <!-- Left side: Profile image and name -->
@@ -91,14 +111,57 @@
     </div>
 </section>
 
+<style>
+
+/* Default styling (PC View) */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Spacing between left and right sections */
+    padding: 20px;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center; /* Center align text */
+        gap: 20px; /* Reduce space between sections */
+    }
+
+    #home div {
+        max-width: 90%; /* Prevents content from being too wide */
+    }
+
+    #home img {
+        width: 150px; /* Slightly smaller profile image */
+        height: 150px;
+    }
+
+    /* Ensure lists and text align properly */
+    .interests ul, .education ul {
+        padding-left: 10px; /* Reduce padding for better alignment */
+    }
+
+    /* Align education and interests section */
+    .interests, .education {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+</style>
+
 <section id="research" class="section">
-    <h2>Research Activities</h2>
+    <h2 style="text-align: center;">Research Details</h2>
     
     <!-- Research Dropdown Menu -->
     <div style="max-width: 800px; margin: 0 auto;">
         
         <!-- Research Interests -->
-        <button class="dropdown-btn" onclick="toggleDropdown('researchInterests')">Research Focus</button>
+        <button class="dropdown-btn" onclick="toggleDropdown('researchInterests')">Research</button>
         <div class="dropdown-content" id="researchInterests">
             <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheory')">Graph Theory & Chemical Graphs</button>
             <div class="sub-dropdown-content" id="graphTheory">
@@ -124,42 +187,50 @@
         <!-- Research Awards -->
         <button class="dropdown-btn" onclick="toggleDropdown('researchAwards')">Research Awards</button>
         <div class="dropdown-content" id="researchAwards">
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('bestPaper')">Raman Research Award - VIT, Vellore</button>
-            <div class="sub-dropdown-content" id="bestPaper">
-                <p>Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research. </p>
-</body>
-            </div>
-            
+
             <button class="sub-dropdown-btn" onclick="toggleDropdown('outstandingResearcher')">Best Paper Award - Periyar University</button>
             <div class="sub-dropdown-content" id="outstandingResearcher">
                 <p>Received the <strong>Best Paper Award</strong> at the <strong>International Conference on Graph Theory (ICGT 2024)</strong>, held on <strong>January 8-9, 2024</strong>, at <strong>Periyar University, Salem</strong>, for the research on <strong>"Generalized Results for Degree-Based Entropies of Aluminosilicate Minerals and Their Applications in QSPR Modeling."</strong></p>
-<img src="images/award_image.jpeg" alt="Raman Research Award" style="display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 600px; margin-top: 10px;">
+                <img src="images/award_image.jpeg" alt="Raman Research Award" style="display: block; margin: 10px auto; width: 100%; max-width: 600px;">
+            </div>
+
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('bestPaper')">Raman Research Award - VIT, Vellore</button>
+            <div class="sub-dropdown-content" id="bestPaper">
+                <p>Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research.</p>
             </div>
         </div>
 
         <!-- Conferences Presented -->
         <button class="dropdown-btn" onclick="toggleDropdown('conferencesPresented')">Conferences Presented</button>
         <div class="dropdown-content" id="conferencesPresented">
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('ausICMS')">AUS-ICMS’25</button>
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('ausICMS')">AUS-ICMS’25-American University of Sharjah</button>
             <div class="sub-dropdown-content" id="ausICMS">
-                <p>Fourth International Conference on Mathematics and Statistics (AUS-ICMS’25), American University of Sharjah, UAE.</p>
-            </div>
-            
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheoryConf')">International Graph Theory Conference 2024</button>
-            <div class="sub-dropdown-content" id="graphTheoryConf">
-                <p>Discussed advancements in graph-based molecular descriptors.</p>
-            </div>
-            
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('compChemSummit')">Computational Chemistry Summit 2023</button>
-            <div class="sub-dropdown-content" id="compChemSummit">
-                <p>Presented novel approaches to molecular topology computation.</p>
+                <p>The research paper <strong>"On Szeged-Type Indices of Zeolite BCT Framework"</strong> was successfully presented at the prestigious <strong>Fourth International Conference on Mathematics and Statistics (AUS-ICMS’25)</strong>, held from <strong>February 20-22, 2025, at the American University of Sharjah, UAE</strong>. The event provided valuable exposure, fostering insightful discussions with global experts and opening doors for future collaborations in mathematical and chemical graph theory. It was also a fantastic opportunity to explore Dubai, visiting some of its iconic landmarks and experiencing the vibrant culture of the city 🌆.</p>
+
+                <!-- Image Slider -->
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="images/AUS-1.jpeg" alt="Conference Image 1"></div>
+                        <div class="slide"><img src="images/AUS-2.jpeg" alt="Conference Image 2"></div>
+                        <div class="slide"><img src="images/AUS-3.jpeg" alt="Conference Image 3"></div>
+                        <div class="slide"><img src="images/AUS-4.jpeg" alt="Conference Image 4"></div>
+                        <div class="slide"><img src="images/AUS-5.jpeg" alt="Conference Image 5"></div>
+                        <div class="slide"><img src="images/AUS-6.jpeg" alt="Conference Image 6"></div>
+                        <div class="slide"><img src="images/AUS-7.jpeg" alt="Conference Image 7"></div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="dots-container"></div>
+                </div>
+
             </div>
         </div>
-        
     </div>
 </section>
 
+
 <style>
+/* General Dropdown Button Styles */
 .dropdown-btn, .sub-dropdown-btn {
     width: 100%;
     padding: 15px;
@@ -171,6 +242,12 @@
     text-align: left;
     border-radius: 5px;
     margin-top: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-btn:hover, .sub-dropdown-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-btn::after, .sub-dropdown-btn::after {
@@ -179,6 +256,7 @@
     padding-right: 10px;
 }
 
+/* Dropdown Content */
 .dropdown-content, .sub-dropdown-content {
     display: none;
     padding: 10px;
@@ -186,60 +264,201 @@
     background-color: #f9f9f9;
     border-radius: 5px;
     margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .sub-dropdown-btn {
-    background-color: #0056b3;
+    background-color: #004080;
     font-size: 16px;
     padding: 10px;
+}
+
+/* Image Slider Styles */
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Pagination */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007bff;
+    width: 14px;
+    height: 14px;
 }
 </style>
 
 <script>
-document.addEventListener('click', function(event) {
+// Dropdown Functionality
+document.addEventListener('click', function (event) {
     let isMain = event.target.classList.contains('dropdown-btn');
     let isSub = event.target.classList.contains('sub-dropdown-btn');
 
     if (isMain) {
-        // Close other main dropdowns
         document.querySelectorAll('.dropdown-content').forEach(content => {
             if (content !== event.target.nextElementSibling) content.style.display = 'none';
         });
 
-        // Toggle selected main dropdown
         let dropdown = event.target.nextElementSibling;
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
     }
 
     if (isSub) {
-        // Close other sub-dropdowns inside the same main dropdown
         let parentDropdown = event.target.closest('.dropdown-content');
         parentDropdown.querySelectorAll('.sub-dropdown-content').forEach(sub => {
             if (sub !== event.target.nextElementSibling) sub.style.display = 'none';
         });
 
-        // Toggle selected sub-dropdown
         let subDropdown = event.target.nextElementSibling;
         subDropdown.style.display = (subDropdown.style.display === 'block') ? 'none' : 'block';
     }
 });
 
 // Close dropdowns when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.dropdown-btn, .sub-dropdown-btn')) {
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.dropdown-btn, .sub-dropdown-btn, .slider-container')) {
         document.querySelectorAll('.dropdown-content, .sub-dropdown-content').forEach(content => {
             content.style.display = 'none';
         });
     }
 });
 
+// Image Slider Functionality
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const slider = document.querySelector('.slider');
+const dotsContainer = document.createElement('div');
+
+dotsContainer.classList.add('dots-container');
+document.querySelector('.slider-container').appendChild(dotsContainer);
+
+// Create dots dynamically
+for (let i = 0; i < totalSlides; i++) {
+    let dot = document.createElement('span');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => moveToSlide(i));
+    dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll('.dot');
+updateDots();
+
+// Update slider position
+function updateSlidePosition() {
+    slider.style.transition = 'transform 0.6s ease-in-out';
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateDots();
+}
+
+// Smooth Loop Transition
+function moveSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex >= totalSlides) {
+        setTimeout(() => {
+            slider.style.transition = 'none';
+            currentIndex = 0;
+            updateSlidePosition();
+        }, 600);
+    } else if (currentIndex < 0) {
+        setTimeout(() => {
+            slider.style.transition = 'none';
+            currentIndex = totalSlides - 1;
+            updateSlidePosition();
+        }, 600);
+    }
+
+    updateSlidePosition();
+    resetAutoSlide();
+}
+
+// Move to specific slide
+function moveToSlide(index) {
+    currentIndex = index;
+    updateSlidePosition();
+    resetAutoSlide();
+}
+
+// Auto-slide every 6 seconds
+let autoSlide = setInterval(() => moveSlide(1), 6000);
+
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => moveSlide(1), 6000);
+}
+
+// Update active dot
+function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+// Initialize slider position
+updateSlidePosition();
+
+
 </script>
 
 
 
-
     <section id="publications" class="section">
-        <h2>Recent Publications</h2>
+        <h2 style="text-align: center;">List of Publications</h2>
         <div id="loading">Loading publications...</div>
         <div id="publication-list"></div>
     </section>
