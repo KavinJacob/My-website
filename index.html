@@ -179,6 +179,7 @@
     justify-content: center;
     gap: 40px;
     padding: 20px;
+    flex-wrap: nowrap; /* Prevents wrapping */
 }
 
 /* Mobile Optimization */
@@ -187,10 +188,11 @@
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        flex-wrap: nowrap; /* Prevents elements from going into two lines */
     }
 
     #home div {
-        max-width: 90%;
+        max-width: 100%; /* Ensures content takes full width */
     }
 
     /* Ensure lists and text align properly */
@@ -199,7 +201,7 @@
     }
 
     .interests, .education {
-        flex-direction: column;
+        display: block; /* Avoids unexpected wrapping */
         text-align: center;
     }
 
