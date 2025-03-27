@@ -173,39 +173,39 @@
 <style>
 
 /* Default styling (PC View) */
-#home {
+#navbar {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
     flex-wrap: nowrap; /* Prevents wrapping */
+    padding: 10px 0;
 }
 
 /* Mobile Optimization */
 @media screen and (max-width: 768px) {
+    #navbar {
+        display: flex;
+        flex-wrap: nowrap; /* Ensures elements stay in one line */
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #navbar a {
+        flex: 1; /* Makes sure buttons spread evenly */
+        text-align: center;
+        white-space: nowrap; /* Prevents text wrapping */
+        font-size: 14px; /* Adjusts text size for smaller screens */
+        padding: 8px 5px; /* Reduces padding to fit within the screen */
+    }
+
+    /* Ensure the profile section remains neat */
     #home {
         flex-direction: column;
         text-align: center;
         gap: 20px;
-        flex-wrap: nowrap; /* Prevents elements from going into two lines */
     }
 
-    #home div {
-        max-width: 100%; /* Ensures content takes full width */
-    }
-
-    /* Ensure lists and text align properly */
-    .interests ul, .education ul {
-        padding-left: 10px;
-    }
-
-    .interests, .education {
-        display: block; /* Avoids unexpected wrapping */
-        text-align: center;
-    }
-
-    /* Reduce social media icon size on mobile */
     .social-icons img, #home a img {
         width: 30px !important;
         height: 30px !important;
