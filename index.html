@@ -88,6 +88,79 @@
             color: #002147;
             font-weight: bold;
         }
+/* Default styling (PC View) */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Mobile Optimization - Improved */
+@media screen and (max-width: 768px) {
+    /* Arrange navigation buttons in two columns */
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        background: #004080; /* Keep button background */
+        color: white;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background: #FFD700; /* Gold hover effect */
+        color: #002147;
+    }
+}
+    /* Home Section - Stack elements */
+    #home {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    #home div {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Optimize section layout */
+    .section {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    /* Ensure lists align properly */
+    .interests ul, .education ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    /* Reduce social media icon size */
+    .social-icons img, #home a img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    /* Adjust ticker size */
+    .news-ticker {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
     </style>
 </head>
 <body>
@@ -170,48 +243,7 @@
     </div>
 </section>
 
-<style>
 
-/* Default styling (PC View) */
-#navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap; /* Prevents wrapping */
-    padding: 10px 0;
-}
-
-/* Mobile Optimization */
-@media screen and (max-width: 768px) {
-    #navbar {
-        display: flex;
-        flex-wrap: nowrap; /* Ensures elements stay in one line */
-        justify-content: space-between;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    #navbar a {
-        flex: 1; /* Makes sure buttons spread evenly */
-        text-align: center;
-        white-space: nowrap; /* Prevents text wrapping */
-        font-size: 14px; /* Adjusts text size for smaller screens */
-        padding: 8px 5px; /* Reduces padding to fit within the screen */
-    }
-
-    /* Ensure the profile section remains neat */
-    #home {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .social-icons img, #home a img {
-        width: 30px !important;
-        height: 30px !important;
-    }
-}
-</style>
 
 <section id="research" class="section">
     <h2 style="text-align: center;">Research Details</h2>
@@ -222,25 +254,18 @@
         <!-- Research Interests -->
         <button class="dropdown-btn" onclick="toggleDropdown('researchInterests')">Research</button>
         <div class="dropdown-content" id="researchInterests">
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheory')">Graph Theory & Chemical Graphs</button>
-            <div class="sub-dropdown-content" id="graphTheory">
-                <p>Study of graphs and their applications in chemistry, focusing on molecular structures and connectivity indices.</p>
-            </div>
-            
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('topologicalIndices')">Topological Indices & Molecular Descriptors</button>
+
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('topologicalIndices')">Research Topic</button>
             <div class="sub-dropdown-content" id="topologicalIndices">
                 <p>Mathematical descriptors of molecular structures used in QSAR and QSPR modeling.</p>
             </div>
-            
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('computationalChemistry')">Computational Chemistry</button>
-            <div class="sub-dropdown-content" id="computationalChemistry">
-                <p>Application of computational techniques to study molecular behavior and chemical properties.</p>
+
+            <button class="sub-dropdown-btn" onclick="toggleDropdown('graphTheory')">Research Team</button>
+            <div class="sub-dropdown-content" id="graphTheory">
+                <p>Our research team at VIT, led by <strong>Dr. Clement J</strong>, is dedicated to advancing the field of mathematical chemistry and topological indices. Under his expert guidance, we explore the structural and computational aspects of chemical graph theory, with applications in QSAR/QSPR modeling, network analysis, and entropy measures. Working alongside my co-scholars Rahul M. P., Junias J. Singh, and P. Peter, we actively contribute to high-impact research, focusing on novel graph invariants, zeolite frameworks, and their implications in material science. Our collaborative efforts aim to push the boundaries of mathematical modeling and its interdisciplinary applications.</p>
             </div>
             
-            <button class="sub-dropdown-btn" onclick="toggleDropdown('scientificProgramming')">Scientific Programming (Python)</button>
-            <div class="sub-dropdown-content" id="scientificProgramming">
-                <p>Developing Python-based tools for graph analysis and molecular modeling.</p>
-            </div>
+            
         </div>
 
         <!-- Research Awards -->
@@ -256,6 +281,17 @@
             <button class="sub-dropdown-btn" onclick="toggleDropdown('bestPaper')">Raman Research Award - VIT, Vellore</button>
             <div class="sub-dropdown-content" id="bestPaper">
                 <p>Received the prestigious <strong>Raman Research Award</strong> three times from <strong>Vellore Institute of Technology (VIT)</strong> in recognition of outstanding research contributions published in <strong>high-impact Scopus-indexed journals</strong>. This award honors excellence in scholarly publications and significant contributions to the advancement of research.</p>
+
+		    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="images/Raman-1.png" alt="VIT University 1"></div>
+            <div class="slide"><img src="images/Raman-2.png" alt="VIT University 2"></div>
+            <div class="slide"><img src="images/Raman-2.png" alt="VIT University 3"></div>
+        </div>
+        <button class="prev" onclick="moveSlideRaman(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlideRaman(1)">&#10095;</button>
+        <div class="dots-container-raman"></div>
+    </div>
             </div>
         </div>
 
@@ -281,7 +317,6 @@
                     <button class="next" onclick="moveSlide(1)">&#10095;</button>
                     <div class="dots-container"></div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -437,80 +472,85 @@ document.addEventListener('click', function (event) {
     }
 });
 
-// Image Slider Functionality
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const slider = document.querySelector('.slider');
-const dotsContainer = document.createElement('div');
+document.querySelectorAll('.slider-container').forEach((container, index) => {
+    let currentIndex = 0;
+    const slides = container.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const slider = container.querySelector('.slider');
+    
+    // Create dots container
+    const dotsContainer = document.createElement('div');
+    dotsContainer.classList.add('dots-container');
+    container.appendChild(dotsContainer);
 
-dotsContainer.classList.add('dots-container');
-document.querySelector('.slider-container').appendChild(dotsContainer);
-
-// Create dots dynamically
-for (let i = 0; i < totalSlides; i++) {
-    let dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => moveToSlide(i));
-    dotsContainer.appendChild(dot);
-}
-
-const dots = document.querySelectorAll('.dot');
-updateDots();
-
-// Update slider position
-function updateSlidePosition() {
-    slider.style.transition = 'transform 0.6s ease-in-out';
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateDots();
-}
-
-// Smooth Loop Transition
-function moveSlide(step) {
-    currentIndex += step;
-
-    if (currentIndex >= totalSlides) {
-        setTimeout(() => {
-            slider.style.transition = 'none';
-            currentIndex = 0;
-            updateSlidePosition();
-        }, 600);
-    } else if (currentIndex < 0) {
-        setTimeout(() => {
-            slider.style.transition = 'none';
-            currentIndex = totalSlides - 1;
-            updateSlidePosition();
-        }, 600);
+    // Create dots dynamically
+    for (let i = 0; i < totalSlides; i++) {
+        let dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => moveToSlide(i));
+        dotsContainer.appendChild(dot);
     }
 
+    const dots = dotsContainer.querySelectorAll('.dot');
+    updateDots();
+
+    // Update slider position
+    function updateSlidePosition() {
+        slider.style.transition = 'transform 0.6s ease-in-out';
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+
+    // Smooth Loop Transition
+    function moveSlide(step) {
+        currentIndex += step;
+
+        if (currentIndex >= totalSlides) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                currentIndex = 0;
+                updateSlidePosition();
+            }, 600);
+        } else if (currentIndex < 0) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                currentIndex = totalSlides - 1;
+                updateSlidePosition();
+            }, 600);
+        }
+
+        updateSlidePosition();
+        resetAutoSlide();
+    }
+
+    // Move to specific slide
+    function moveToSlide(index) {
+        currentIndex = index;
+        updateSlidePosition();
+        resetAutoSlide();
+    }
+
+    // Auto-slide every 6 seconds
+    let autoSlide = setInterval(() => moveSlide(1), 6000);
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => moveSlide(1), 6000);
+    }
+
+    // Update active dot
+    function updateDots() {
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    // Initialize slider position
     updateSlidePosition();
-    resetAutoSlide();
-}
 
-// Move to specific slide
-function moveToSlide(index) {
-    currentIndex = index;
-    updateSlidePosition();
-    resetAutoSlide();
-}
-
-// Auto-slide every 6 seconds
-let autoSlide = setInterval(() => moveSlide(1), 6000);
-
-function resetAutoSlide() {
-    clearInterval(autoSlide);
-    autoSlide = setInterval(() => moveSlide(1), 6000);
-}
-
-// Update active dot
-function updateDots() {
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
-}
-
-// Initialize slider position
-updateSlidePosition();
-
+    // Attach event listeners to navigation buttons
+    container.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+    container.querySelector('.next').addEventListener('click', () => moveSlide(1));
+});
 
 </script>
 
