@@ -3,27 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Research Hub of Kavin Jacob</title>
+    <title> The Research Hub of D Kavin Jacob </title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
     <style>
         /* General Styles */
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #002147; color: white; padding: 15px 20px; text-align: center; font-size: 24px; font-weight: bold; }
-        nav { background: #002147; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; cursor: pointer; }
-        nav a:hover { text-decoration: underline; }
+
+        /* Header - Research Hub Title */
+        .header-container {
+            background: linear-gradient(to right, #002147, #003366); /* Gradient effect */
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            font-size: px;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #004080; /* Different shade for contrast */
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Slight shadow */
+        }
+  nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer; /* 👈 Fix: Ensures the hand cursor appears */
+    }
+        nav a:hover {
+            background: #FFD700; /* Gold hover effect */
+            color: #002147;
+        }
 
         /* Sections */
-        .section { display: none; padding: 20px; max-width: 800px; margin: 20px auto; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-        .publication-item { background: #ddd; padding: 15px; margin: 10px 0; border-left: 5px solid #002147; font-size: 16px; line-height: 1.6; }
-        .active { display: block; }
+        .section {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .publication-item {
+            background: #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #002147;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .active {
+            display: block;
+        }
+
+        /* News Ticker */
+        .news-ticker {
+            background: #FFD700;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
 
         /* Loading Animation */
-        #loading { text-align: center; font-size: 18px; padding: 20px; color: #002147; font-weight: bold; }
+        #loading {
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            color: #002147;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-    <header>The Research Hub of Kavin Jacob</header>
+    <div class="header-container">🔬 The Research Hub of Kavin Jacob 🧑‍🔬</div>
 
     <nav>
         <a onclick="showSection('home')">Home</a>
@@ -31,25 +100,15 @@
         <a onclick="showSection('publications')">Publications</a>
         <a onclick="showSection('contact')">Contact</a>
     </nav>
-<div class="news-ticker">
-    <marquee behavior="scroll" direction="left">
-        🔥 Recent Publication: "A New Approach to Chemical Graph Theory" - Published in XYZ Journal |  
-        📢 Upcoming Conference: AUS-ICMS'25 - American University of Sharjah |  
-        🎉 Research Spotlight: "Szeged-Type Entropies in Zeolite Frameworks" 🚀  
-    </marquee>
-</div>
 
-<style>
-    /* News Ticker Styles */
-    .news-ticker {
-        background: #FFD700; /* Gold background */
-        color: #000; /* Black text */
-        padding: 10px;
-        font-weight: bold;
-        font-size: 16px;
-        text-align: center;
-    }
-</style>
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="left">
+            <a href="https://www.frontiersin.org/articles/10.3389/fchem.2025.1543588/full" target="_blank" style="color: inherit; text-decoration: none;">
+                📢 Recent Publication: "Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW" - Frontiers in Chemistry
+            </a>
+        </marquee>
+    </div>
+
 
 
 <section id="home" class="section" style="display: flex; align-items: center; gap: 40px;">
@@ -118,40 +177,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px; /* Spacing between left and right sections */
+    gap: 40px;
     padding: 20px;
 }
 
 /* Mobile Optimization */
 @media screen and (max-width: 768px) {
     #home {
-        flex-direction: column; /* Stack items vertically on small screens */
-        text-align: center; /* Center align text */
-        gap: 20px; /* Reduce space between sections */
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 
     #home div {
-        max-width: 90%; /* Prevents content from being too wide */
-    }
-
-    #home img {
-        width: 150px; /* Slightly smaller profile image */
-        height: 150px;
+        max-width: 90%;
     }
 
     /* Ensure lists and text align properly */
     .interests ul, .education ul {
-        padding-left: 10px; /* Reduce padding for better alignment */
+        padding-left: 10px;
     }
 
-    /* Align education and interests section */
     .interests, .education {
         flex-direction: column;
         text-align: center;
     }
+
+    /* Reduce social media icon size on mobile */
+    .social-icons img, #home a img {
+        width: 30px !important;
+        height: 30px !important;
+    }
 }
-
-
 </style>
 
 <section id="research" class="section">
