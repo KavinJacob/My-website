@@ -1,5 +1,14 @@
 [
     {
+        "authors": "Pancras Peter, Joseph Clement, Micheal Arockiaraj, and Kavin Jacob",
+        "year": "2025",
+        "title": "Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW",
+        "journal": "Frontiers in Chemistry",
+        "volume_issue": "13",
+        "pages": "1543588",
+        "apa_citation": "<a href=\"https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2025.1543588/full\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">Pancras Peter, Joseph Clement, Micheal Arockiaraj, and Kavin Jacob (2025). <b>Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW</b>. <i>Frontiers in Chemistry</i>, 13, 1543588.</a>"
+    },
+    {
         "authors": "Kavin Jacob and Joseph Clement",
         "year": "2024",
         "title": "Zeolite ATN: topological characterization and predictive analysis on potential energies using entropy measures",
@@ -70,14 +79,5 @@
         "volume_issue": "16",
         "pages": "29-33",
         "apa_citation": "<a href=\"https://www.wseas.com/journals/hmt/2021/a105113-300.pdf\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">N Golden Stepha and D Kavin Jacob (2021). <b>Numerical simulation for convective heat and mass transfer effect of micropolar nanofluid flow with Variable Viscosity and radiation</b>. <i>WSEAS Transactions on Heat and Mass Transfer</i>, 16, 29-33.</a>"
-    },
-    {
-        "authors": "Pancras Peter, Joseph Clement, Micheal Arockiaraj, and Kavin Jacob",
-        "year": null,
-        "title": "Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW",
-        "journal": "Frontiers in Chemistry",
-        "volume_issue": "13",
-        "pages": "1543588",
-        "apa_citation": "<a href=\"https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2025.1543588/full\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">Pancras Peter, Joseph Clement, Micheal Arockiaraj, and Kavin Jacob . <b>Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW</b>. <i>Frontiers in Chemistry</i>, 13, 1543588.</a>"
     }
 ]
