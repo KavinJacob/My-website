@@ -1,5 +1,14 @@
 [
     {
+        "authors": "Kavin Jacob, Joseph Clement, Micheal Arockiaraj, Pancras Peter, and Krishnan Balasubramanian",
+        "year": "2025",
+        "title": "Network topology and entropy analysis of tetragonal farneseite zeolites",
+        "journal": "Scientific Reports",
+        "volume_issue": "15(1)",
+        "pages": "14896",
+        "apa_citation": "<a href=\"https://www.nature.com/articles/s41598-025-90177-y\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">Kavin Jacob, Joseph Clement, Micheal Arockiaraj, Pancras Peter, and Krishnan Balasubramanian (2025). <b>Network topology and entropy analysis of tetragonal farneseite zeolites</b>. <i>Scientific Reports</i>, 15(1), 14896.</a>"
+    },
+    {
         "authors": "Pancras Peter, Joseph Clement, Micheal Arockiaraj, and Kavin Jacob",
         "year": "2025",
         "title": "Predictive modeling of molecular interaction energies using topological and spectral entropies of zeolite AWW",
